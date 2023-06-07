@@ -78,7 +78,7 @@ Kubernetes, представляющий собой «обертку» для о
 помощью пространств имен и cgroups. Контейнеры в одном и том же pod не
 изолированы друг от друга и используют общие пространства имен.
 
-` Контейнеры, выполняющие вспомогательные функции по отношению к основному контейнеру в pod, называются sidecars.`
+> ☝️ Контейнеры, выполняющие вспомогательные функции по отношению к основному контейнеру в pod, называются sidecars.
 
 ![Схема 1. Инфраструктура Kubernetes](Scheme_1.png)
 
@@ -149,14 +149,14 @@ Cilium + CNI для BGP протокола).
 или использовать команду `kubectl explain <resource>` для получения информации о конкретном ресурсе Kubernetes, например,
 `kubectl explain service`.
 
-`💡 Уже на этапе поднятия CNI для k8s можно осуществлять наблюдаемость за 
+> 💡 Уже на этапе поднятия CNI для k8s можно осуществлять наблюдаемость за 
 инфраструктурой при помощи встроенных инструментов от Kubernetes 
 (Kubernetes Dashboard, kubectl, или получать информацию через  
-`[`Kubernetes API`](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-apiserver/)`) 
+[Kubernetes API](https://kubernetes.io/docs/reference/command-line-tools-reference/kube-apiserver/)) 
 либо при помощи инструментов от выбранных вами CNI 
-(`[`Calico observability tools`](https://github.com/tigera-solutions/calicocloud-aks-workshop/blob/main/modules/using-observability-tools.md)`, 
-`[`Cilium Hubble`](https://github.com/cilium/hubble#features)`, 
-`[`Istio Kiali`](https://istio.io/latest/docs/tasks/observability/kiali/)`).`
+([Calico observability tools](https://github.com/tigera-solutions/calicocloud-aks-workshop/blob/main/modules/using-observability-tools.md), 
+[Cilium Hubble](https://github.com/cilium/hubble#features), 
+[Istio Kiali](https://istio.io/latest/docs/tasks/observability/kiali/)).
 
 ### Пример микросервисной архитектуры в Kubernetes
 
@@ -254,7 +254,8 @@ Unix, которая была представлена в 1992 году и по�
 пространство. Классический BPF широко использовался в таких
 инструментах, как tcpdump.
 
-`Если вы запустите tcpdump с фильтром (определенный хост или порт), он компилируется в оптимальный байткод BPF, который выполняется встроенной виртуальной машиной в ядре.`
+> 🔦 Если вы запустите tcpdump с фильтром (определенный хост или порт), он компилируется в оптимальный байткод BPF, 
+> который выполняется встроенной виртуальной машиной в ядре.
 
 Разработка **extended Berkeley Packet Filter** (eBPF, расширенного BPF)
 в 2014 году открыла множество новых вариантов использования, особенно в
